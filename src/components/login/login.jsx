@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { login } from './login.io'
-import { requiredValidation } from './login.validations'
+import { requiredValidation, patternValidation } from './login.validations'
 import { initialFormValues, labelMap } from './login.content'
 import './login.scss'
 
@@ -30,6 +30,16 @@ export function Login() {
           helperText: isEmpty ? 'Required' : '',
         }
         formValid = formValid && !isEmpty
+      }
+      //pattern validation
+      if (field.pattern && !validationFields[fieldName].error) {
+        const isPatternValid = patternValidation(field.pattern.regex, field.value)
+        validationFields[fieldName] = {
+          ...field,
+          error: !isPatternValid,
+          helperText: !isPatternValid ? field.pattern.failedText : '',
+        }
+        formValid = formValid && isPatternValid
       }
     }
     setFormValues({ ...formValues, ...validationFields })
