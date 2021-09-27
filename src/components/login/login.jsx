@@ -67,7 +67,7 @@ export function Login() {
         <form id="form-login">
           <h1>{labelMap.headers.signIn}</h1>
           <div className="form-field">
-            <label htmlFor="email">{labelMap.fields.email}</label>
+            <label htmlFor="email">{'email to me'}</label>
             <input type="email" name="email" value={formValues.email.value} onChange={handleInputChange}/>
             {formValues.email.error ? <span className='form-error'>{formValues.email.helperText}</span> : '' }
           </div>
