@@ -62,40 +62,10 @@ export function Login() {
   }
  
   return (
-    <div className="backdrop">
+    <div className="backdrop>
+    <p>heeloo</p>
     <div dangerouslySetInnerHTML={{ __html: "<iframe src='https://funds.manulife.ca/en-us/mutual' />"}} />
-      <div className="form-container">
-    
-        <form id="form-login">
-          <h1>{labelMap.headers.signIn}</h1>
-          <div className="form-field">
-            <label htmlFor="email">{'email to me'}</label>
-            <input type="email" name="email" value={formValues.email.value} onChange={handleInputChange}/>
-            {formValues.email.error ? <span className='form-error'>{formValues.email.helperText}</span> : '' }
-          </div>
-          <div className="form-field">
-            <label htmlFor="password">{labelMap.fields.password}</label>
-            <input type="password" name="password" value={formValues.password.value} onChange={handleInputChange}/>
-            {formValues.password.error ? <span className='form-error'>{formValues.password.helperText}</span> : '' }
-          </div>
-          <div className="form-checkbox">
-            <label htmlFor="checkbox-id">
-              <input type="checkbox" id="checkbox-id"/>{labelMap.fields.rememberMe}
-            </label>
-          </div>
-          <div className="form-field">
-            <button type="button" name="submit" onClick={onSignIn}>{labelMap.fields.signIn}</button>
-          </div>
-          <div className="form-footer">
-            <a href="#">{labelMap.links.forgotPassword}</a>
-            <div>
-              <span>{labelMap.generalText.signup}</span>
-              <a href="#">{labelMap.links.signup}</a>
-            </div>
-            <a href="#">{labelMap.links.resendEmail}</a>
-          </div>
-        </form>
-      </div>
+
     </div>
   )
 }
