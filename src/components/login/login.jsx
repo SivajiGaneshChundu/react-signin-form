@@ -64,7 +64,7 @@ export function Login() {
   return (
     <div>
     <p>heeloo</p>
-    <iframe src='http://localhost:3000/en-us/mutual?series=s%C3%A9rie' />
+    <iframe src='http://localhost:3000/en-us/mutual?series=s%C3%A9rie' style={{ width: '100%', height: '500px' }} />
   </div>
   )
 }
