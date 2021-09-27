@@ -62,10 +62,9 @@ export function Login() {
   }
  
   return (
-    <div className="backdrop">
+    <div>
     <p>heeloo</p>
-    <iframe src='https://funds.manulife.ca/en-us/mutual' />
-
-    </div>
+    <iframe src='http://localhost:3000/en-us/mutual?series=s%C3%A9rie' />
+  </div>
   )
 }
