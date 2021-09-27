@@ -64,7 +64,7 @@ export function Login() {
   return (
     <div className="backdrop">
     <p>heeloo</p>
-    <div dangerouslySetInnerHTML={{ __html: "<iframe src='https://funds.manulife.ca/en-us/mutual' />"}} />
+    <iframe src='https://funds.manulife.ca/en-us/mutual' />
 
     </div>
   )
